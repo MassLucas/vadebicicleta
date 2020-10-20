@@ -1,8 +1,11 @@
-* {
-    margin: 6px;
-    border: 1px solid black;
+#navbar {
+    background-color: #ffff66;
+    border-bottom: 1px solid black;
 }
 
-h1 {
-    border: 1px solid red;
-}
+html {
+    height: 100%;
+  }
+  body {
+    min-height: 100%;
+  }
