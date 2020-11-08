@@ -1,11 +1,22 @@
 #navbar {
-    background-color: #ffff66;
-    border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
+  background: rgb(255,249,194);
+  background: linear-gradient(0deg, rgba(255,249,194,1) 0%, rgba(255,239,106,1) 100%);
 }
 
 html {
-    height: 100%;
-  }
-  body {
-    min-height: 100%;
-  }
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image:linear-gradient(
+    rgba(0, 0, 0, 0.7), 
+    rgba(0, 0, 0, 0.7)
+  ), url("../img/bicycle_bg.jpg") ;
+}

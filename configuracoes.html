@@ -7,14 +7,27 @@
         <link rel="stylesheet" href="css/style.css">
         <style type="text/css">
             #conteudo {
-              padding-left: 10px;
-              padding-top: 10px;
+              padding-top: 20px;
             }
 
-            .aluguel-card {
+            .alugar-card {
               margin: 20px;
               background: rgb(255,249,194);
               background: linear-gradient(180deg, rgba(255,249,194,1) 0%, rgba(255,239,106,1) 100%);
+              padding: 15px;
+              height: 600px;
+              width: 400px;
+            }
+            
+            #formcard{
+                background-color:rgba(0,0,0,0);
+                background-clip: border-box;
+                border: 0px solid rgba(255, 255, 255, 0);
+                border-radius: 0px;
+            }
+
+            #confirmar {
+                margin-top: 15px;
             }
         </style>
     </head>
@@ -51,39 +64,41 @@
             </div>
           </nav>
 
-          <!-- Alugueis -->
-          <div id="conteudo" class="container">
-            <div class="row">
-              <!-- Aluguel exemplo 1-->
-              <div class="card aluguel-card" style="width: 18rem;">
-                <img class="card-img-top" src="img/bicycle.png" alt="Icone Bicicleta">
+          
+          <!-- Configuracoes -->
+          <div id="conteudo" class="d-flex justify-content-center">
+            <div class="card alugar-card">
+                <h5 class="card-title">Configurações de Conta</h5>
                 <div class="card-body">
-                  <h5 class="card-title">Bicicleta #1</h5>
-                  <p class="card-text">Local: Rio de Janeiro, Copacabana</p>
-                  <p class="card-text">Data: 09/11/2020</p>
-                  <p class="card-text">T. de Aluguel: 01:28:22</p>
+                    <div id="formcard" class="card align-self-center">
+                        <form>
+                            <div class="form-group">
+                                <label class="mr-sm-2" for="nomeInput">Nome</label>
+                                <input id="inputNome" type="email" class="form-control" placeholder="Nome Completo" value="Fulano Detal" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label class="mr-sm-2" for="emailInput">Email</label>
+                                <input id="inputEmail" type="email" class="form-control" placeholder="Número da Tranca" value="email@exemplo.com">
+                            </div>
+                            <div class="form-group">
+                                <label class="mr-sm-2" for="senhaInput">Senha</label>
+                                <input id="inputSenha" type="password" class="form-control" placeholder="Senha" value="1234">
+                            </div>
+                            <div class="form-group">
+                                <label class="mr-sm-2" for="cpfInput">CPF</label>
+                                <input id="inputCpf" type="text" class="form-control" placeholder="CPF" value="123.456.789-10" readonly>
+                            </div>
+                            <select id="cartao" class="custom-select">
+                                <option selected>Formas de Pagamento</option>
+                                <option value="1">Visa Final 1234</option>
+                                <option value="2">Elo Final 5678</option>
+                                <option value="3">Adicionar Cartão...</option>
+                            </select>
+                            <a id="confirmar" type="submit" class="btn btn-primary" href="#">Confirmar</a>
+                        </form>
+                    </div>
                 </div>
-                <div class="card-body">
-                  <a href="#" class="card-link">Informações</a>
-                  <a href="#" class="card-link">Suporte</a>
-                </div>
-              </div>
-              <!-- Aluguel exemplo 2-->
-              <div class="card aluguel-card" style="width: 18rem;">
-                <img class="card-img-top" src="img/bicycle.png" alt="Icone Bicicleta">
-                <div class="card-body">
-                  <h5 class="card-title">Bicicleta #2</h5>
-                  <p class="card-text">Local: Rio de Janeiro, Copacabana</p>
-                  <p class="card-text">Data: 09/11/2020</p>
-                  <p class="card-text">T. de Aluguel: 01:28:04</p>
-                </div>
-                <div class="card-body">
-                  <a href="#" class="card-link">Informações</a>
-                  <a href="#" class="card-link">Suporte</a>
-                </div>
-              </div>
             </div>
-          </div>
 
         <!-- Bibliotecas -->
         <!--bootstrap js - v4.3.1-->

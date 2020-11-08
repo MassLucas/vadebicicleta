@@ -7,14 +7,27 @@
         <link rel="stylesheet" href="css/style.css">
         <style type="text/css">
             #conteudo {
-              padding-left: 10px;
-              padding-top: 10px;
+                padding-top: 20px;
             }
 
-            .aluguel-card {
-              margin: 20px;
-              background: rgb(255,249,194);
-              background: linear-gradient(180deg, rgba(255,249,194,1) 0%, rgba(255,239,106,1) 100%);
+            .alugar-card {
+                margin: 20px;
+                background: rgb(255,249,194);
+                background: linear-gradient(180deg, rgba(255,249,194,1) 0%, rgba(255,239,106,1) 100%);
+                padding: 15px;
+                height: 600px;
+                width: 400px;
+            }
+            
+            #formcard{
+                background-color:rgba(0,0,0,0);
+                background-clip: border-box;
+                border: 0px solid rgba(255, 255, 255, 0);
+                border-radius: 0px;
+            }
+
+            #alugar {
+                margin-top: 15px;
             }
         </style>
     </head>
@@ -51,37 +64,26 @@
             </div>
           </nav>
 
-          <!-- Alugueis -->
-          <div id="conteudo" class="container">
-            <div class="row">
-              <!-- Aluguel exemplo 1-->
-              <div class="card aluguel-card" style="width: 18rem;">
-                <img class="card-img-top" src="img/bicycle.png" alt="Icone Bicicleta">
+          <!-- Novo Aluguel -->
+          <div id="conteudo" class="d-flex justify-content-center">
+            <div class="card alugar-card">
+                <h5 class="card-title">Novo Aluguel</h5>
+                <img class="card-img-top" src="img/mapa.png" alt="Card image cap">
                 <div class="card-body">
-                  <h5 class="card-title">Bicicleta #1</h5>
-                  <p class="card-text">Local: Rio de Janeiro, Copacabana</p>
-                  <p class="card-text">Data: 09/11/2020</p>
-                  <p class="card-text">T. de Aluguel: 01:28:22</p>
+                    <div id="formcard" class="card align-self-center">
+                        <form>
+                            <div class="form-group">
+                                <input id="inputEmail" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Número da Tranca">
+                            </div>
+                            <label class="mr-sm-2" for="selectCartao">Forma de Pagamento</label>
+                            <select id="selectCartao" class="custom-select">
+                                <option value="1">Visa Final 1234</option>
+                                <option value="2">Elo Final 5678</option>
+                            </select>
+                            <a id="alugar" type="submit" class="btn btn-primary" href="#">Alugar</a>
+                        </form>
+                    </div>
                 </div>
-                <div class="card-body">
-                  <a href="#" class="card-link">Informações</a>
-                  <a href="#" class="card-link">Suporte</a>
-                </div>
-              </div>
-              <!-- Aluguel exemplo 2-->
-              <div class="card aluguel-card" style="width: 18rem;">
-                <img class="card-img-top" src="img/bicycle.png" alt="Icone Bicicleta">
-                <div class="card-body">
-                  <h5 class="card-title">Bicicleta #2</h5>
-                  <p class="card-text">Local: Rio de Janeiro, Copacabana</p>
-                  <p class="card-text">Data: 09/11/2020</p>
-                  <p class="card-text">T. de Aluguel: 01:28:04</p>
-                </div>
-                <div class="card-body">
-                  <a href="#" class="card-link">Informações</a>
-                  <a href="#" class="card-link">Suporte</a>
-                </div>
-              </div>
             </div>
           </div>
 
