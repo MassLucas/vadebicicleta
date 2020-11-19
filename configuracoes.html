@@ -30,6 +30,12 @@
                 margin-top: 15px;
             }
         </style>
+        <script>
+          function alterarDados() {
+                alert("Dados atualizados com sucesso.");
+                location.href = "dashboard.html";
+            }
+        </script>
     </head>
     <body>
         <!-- Navbar -->
@@ -94,7 +100,7 @@
                                 <option value="2">Elo Final 5678</option>
                                 <option value="3">Adicionar Cartão...</option>
                             </select>
-                            <a id="confirmar" type="submit" class="btn btn-primary" href="#">Confirmar</a>
+                            <a id="confirmar" type="submit" class="btn btn-primary" onclick="alterarDados()">Confirmar</a>
                         </form>
                     </div>
                 </div>
