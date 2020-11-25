@@ -32,16 +32,9 @@
             }
         </style>
         <script>
-            function login() {
-                var email = document.getElementById("inputEmail").value;
-                var senha = document.getElementById("inputSenha").value;
-
-                if (email == "teste@mail.com" && senha == "teste") {
-                    alert("Login efetuado com sucesso");
-                    location.href = "dashboard.html";
-                } else {
-                    alert("Senha incorreta.");
-                }
+            function cadastrar() {
+                alert("Cadastro realizado com sucesso.");
+                location.href = "login.html";
             }
         </script>
     </head>
@@ -51,15 +44,28 @@
             <h1 id="logo" class="align-self-center"> Vá de Bicicleta </h1>
             <div id="formcard" class="card border-dark align-self-center">
                 <form>
-                    <h4 class="card-title align-self-center"> Login </h1>
+                    <h4 class="card-title align-self-center"> Cadastro </h4>
                     <div class="form-group">
-                        <input id="inputEmail" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                        <label for="inputNome">Nome e Sobrenome</label>
+                        <input id="inputNome" type="text" class="form-control" placeholder="ex: Jose Silva">
                     </div>
                     <div class="form-group">
-                        <input id="inputSenha" type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                        <label for="inputCPF">CPF</label>
+                        <input id="inputCPF" type="text" class="form-control" placeholder="ex: 123.456.789-12">
                     </div>
-                        <a id="entrar" type="submit" class="btn btn-primary" onclick="login()">Entrar</a>
-                        <a id="buttonCriar" type="submit" class="btn btn-primary" href="cadastro.html">Criar conta</a>
+                    <div class="form-group">
+                        <label for="inputDataNascimento">Data de nascimento</label>
+                        <input id="inputDataNascimento" type="text" class="form-control" placeholder="ex: 01/01/1999">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail">Email</label>
+                        <input id="inputEmail" type="email" class="form-control" placeholder="ex: jose@mail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputSenha">Senha</label>
+                        <input id="inputSenha" type="password" class="form-control" placeholder="Entre 6 e 8 caracteres">
+                    </div>
+                    <a id="btn-cadastrar" type="submit" class="btn btn-primary" onclick="cadastrar()">Criar sua conta</a>
                 </form>
             </div>
         </div>

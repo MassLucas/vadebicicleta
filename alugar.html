@@ -30,6 +30,12 @@
                 margin-top: 15px;
             }
         </style>
+        <script>
+          function alugar() {
+                alert("Aluguel realizado com sucesso para as próximas duas horas.");
+                location.href = "dashboard.html";
+            }
+        </script>
     </head>
     <body>
         <!-- Navbar -->
@@ -80,7 +86,7 @@
                                 <option value="1">Visa Final 1234</option>
                                 <option value="2">Elo Final 5678</option>
                             </select>
-                            <a id="alugar" type="submit" class="btn btn-primary" href="#">Alugar</a>
+                            <a id="alugar" type="submit" class="btn btn-primary" onclick="alugar()">Alugar</a>
                         </form>
                     </div>
                 </div>
